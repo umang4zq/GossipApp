@@ -60,4 +60,18 @@
 
 ---
 
-## 📱 App Structure
+---
+
+## 🎯 Use Cases
+
+- 👨‍👩‍👧 Friend groups staying connected
+- 🎓 College students sharing notes & files
+- 💼 Small teams communicating instantly
+- 🗣️ Anyone who wants a private chat space
+
+---
+
+## 👨‍💻 Author
+
+Developed By **Umang Markana**
+[github.com/umang4zq](https://github.com/umang4zq)

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".MasterControlFragment">
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#F8F9FA"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/text1"
+            android:text="Master Control"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+            android:gravity="start"
+            android:textColor="@color/lightblue"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerUsers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"/>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btnTriggerUpdate"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_marginLeft="@dimen/_256sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/update_ic"
+        android:backgroundTint="@color/lapis"
+
+        />
+
+
+</RelativeLayout>

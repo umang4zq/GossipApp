@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_50sdp"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/_12sdp"
+    android:paddingEnd="@dimen/_12sdp"
+    android:gravity="center_vertical">
+
+    <!-- User Avatar -->
+    <ImageView
+        android:id="@+id/imageViewMemberAvatar"
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:src="@drawable/default_avatar"
+        android:scaleType="centerCrop"
+         />
+
+    <!-- Username/Text -->
+    <TextView
+        android:id="@+id/textViewMemberName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Member Name"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/black"
+        android:layout_marginStart="@dimen/_12sdp" />
+
+    <!-- Checkbox -->
+    <CheckBox
+        android:id="@+id/checkBoxSelectMember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

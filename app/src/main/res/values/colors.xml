@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="darkblue">#001A83</color>
+        <color name="lapis">#226EAC</color>
+
+    <color name="navyblue">#002DE3</color>
+    <color name="lightblue">#375FFF</color>
+    <color name="offwhite">#EEF4FA</color>
+    <color name="active_blue">#4CAF50</color>  <!-- Green Active Color -->
+    <color name="inactive_gray">#B0B0B0</color>  <!-- Gray for Inactive -->
+    <color name="green">#259538</color>
+    <color name="red">#DC2C2C</color>
+
+
+
+
+</resources>

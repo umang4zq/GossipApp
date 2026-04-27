@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF4FA"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".Activity.MainActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/lapis"
+        style="@style/CustomBottomNavStyle"
+        app:menu="@menu/navbar"
+    />
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/accessDeniedAnim"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:lottie_rawRes="@raw/alert"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false" />
+    <FrameLayout
+        android:id="@+id/frame_full"
+        android:elevation="11dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomnav"
+        />
+    <FrameLayout
+        android:id="@+id/main_fream"
+        android:elevation="11dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomnav"
+        />
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">GossipApp</string>
+    <string name="webclintId">699328573543-bbqcq7ofbde8fjesrbva48mtc7vvh6od.apps.googleusercontent.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

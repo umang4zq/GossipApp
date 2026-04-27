@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offwhite"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".Activity.LoginActivity">
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/gossip_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loginLoadingAnim"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:lottie_rawRes="@raw/bird"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_450sdp"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true"
+        android:visibility="gone"/>
+    <!-- App Name -->
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gossip"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/navyblue"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Tagline -->
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Talk with your friends and family"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:layout_below="@id/appName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"/>
+
+    <!-- Sign In Heading -->
+    <TextView
+        android:id="@+id/loginHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login here"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/tagline"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentStart="true"/>
+
+
+
+    <!-- Email Input -->
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/loginHeading"
+        android:layout_marginTop="20dp"
+        android:hint="username"
+        android:paddingLeft="15dp"
+        android:elevation="5dp"
+        android:textColor="@color/black"
+        android:textColorHint="#5A5A5A"
+        android:background="@drawable/editbg"
+        android:drawablePadding="10dp"
+       android:inputType="textPersonName"
+        />
+
+    <!-- Password Input -->
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/loginHeading"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/email_icon" />
+    <ImageView
+        android:id="@+id/eye_icon"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_22sdp"
+        android:src="@drawable/eye_close_ic"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginLeft="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_below="@id/username"
+        android:padding="@dimen/_4sdp" />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/username"
+        android:layout_marginTop="15dp"
+        android:hint="password(long press to show password)"
+        android:paddingLeft="15dp"
+        android:inputType="textPassword"
+        android:textColorHint="#5A5A5A"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/editbg"
+        android:elevation="@dimen/_8sdp"
+        android:drawablePadding="10dp"/>
+
+
+
+
+    <!-- Remember Me Checkbox -->
+    <CheckBox
+        android:id="@+id/rememberMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remember Me"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:layout_below="@id/password"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentStart="true"/>
+
+
+
+    <!-- Sign In Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginbutton"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:text="LogIn"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@drawable/edit_bg"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/rememberMe"
+        android:layout_marginTop="20dp"/>
+
+
+
+    <TextView
+        android:id="@+id/signin_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dont  have an account Sign in"
+        android:textSize="14sp"
+        android:textColor="#3F51B5"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/loginbutton"
+        android:layout_marginTop="16dp"/>
+
+
+
+</RelativeLayout>

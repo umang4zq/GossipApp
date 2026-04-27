@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activity.ChatActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- your existing Toolbar + status views… -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/lightblue"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/back_btn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/back_btn" />
+
+        <TextView
+            android:id="@+id/other_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/back_btn"
+            android:text="Username"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/typing_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="4dp"
+            android:text="Typing..."
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Offline"
+        android:layout_marginTop="42dp"
+        android:layout_marginLeft="55dp"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/msg_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/replybar"
+        android:padding="8dp"
+        android:scrollbars="vertical" />
+
+    <!-- Reply preview bar -->
+    <LinearLayout
+        android:id="@+id/replybar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/messageInputLayout"
+        android:visibility="gone"
+        android:padding="8dp"
+        android:orientation="horizontal"
+        android:background="@color/offwhite"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/replyBarUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/replyBarMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingStart="8dp"
+            android:text="Original message…"
+            android:textColor="@color/black" />
+
+        <ImageButton
+            android:id="@+id/replyBarClose"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:contentDescription="Close"
+            android:background="@drawable/close_ic"
+            android:backgroundTint="@color/black"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Bottom CardView (input + preview) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/messageInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:elevation="8dp"
+        app:cardCornerRadius="8dp"
+        android:backgroundTint="@color/offwhite"
+        android:padding="8dp">
+
+        <!-- vertical container for optional preview + input row -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- preview image -->
+            <ImageView
+                android:id="@+id/prewImageView"
+                android:layout_width="400dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_share"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/plus_ic"
+                    android:contentDescription="Attach"
+                    android:onClick="openFilePicker"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"/>
+
+                <!-- Send button on the right -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_send"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/sent_icon"
+                    android:contentDescription="Send"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+                <!-- EditText fills the space between them -->
+                <EditText
+                    android:id="@+id/etMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toEndOf="@id/btn_share"
+                    android:layout_toRightOf="@id/btn_share"
+                    android:layout_toStartOf="@id/btn_send"
+                    android:layout_toLeftOf="@id/btn_send"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/input_bg"
+                    android:hint="Type a message"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/inactive_gray"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

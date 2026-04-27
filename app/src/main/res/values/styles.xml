@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomBottomNavStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <!-- Make Bottom Navigation Fully Transparent -->
+        <item name="android:background">#00000000</item>
+
+        <!-- Remove Default Icon Background (Ripple Effect) -->
+        <item name="itemRippleColor">@android:color/transparent</item>
+
+        <!-- Keep Icon and Text Colors -->
+        <item name="itemIconTint">@color/lapis</item>
+        <item name="itemTextColor">@color/black</item>
+
+        <!-- Adjust Navigation Bar Height -->
+        <item name="android:minHeight">70dp</item> <!-- Default is 56dp, increase as needed -->
+        <item name="android:layout_height">70dp</item>
+
+        <!-- Ensure Width Stays Full -->
+        <item name="android:layout_width">match_parent</item>
+
+        <!-- Increase Icon Size for Better Look -->
+        <item name="itemIconSize">26dp</item>
+    </style>
+    <style name="ReactionStyle">
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <!-- styles.xml -->
+    <style name="ActionStyle">
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+</resources>
+

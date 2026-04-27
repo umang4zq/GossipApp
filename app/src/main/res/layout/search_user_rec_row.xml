@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="345dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/offwhite"
+        app:cardCornerRadius="11dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/profile_pic"
+                layout="@layout/profile_pic_view"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp" />
+
+            <TextView
+                android:id="@+id/user_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/profile_pic"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="User"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/user_Email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_Name"
+                android:layout_toEndOf="@id/profile_pic"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="3dp"
+                android:text="athaliaputri@gmail.com"
+                android:textColor="@color/inactive_gray"
+                android:textSize="14sp" />
+            <View
+                android:id="@+id/status_dot"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignTop="@id/profile_pic"
+                android:layout_alignEnd="@id/profile_pic"
+                android:background="@drawable/status_circle_gray" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,3 @@
+<resources>
+    <dimen name="avatar_grid_size">80dp</dimen>
+</resources>

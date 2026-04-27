@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ProfileFragment">
+
+    <!-- Avatar -->
+    <ImageView
+        android:id="@+id/avatar_image"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:src="@drawable/default_avatar"
+        android:scaleType="centerCrop" />
+
+    <!-- Add Icon -->
+    <TextView
+        android:id="@+id/add_profile"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginLeft="@dimen/_210sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Add profile"
+        android:gravity="end"
+        android:textColor="@color/lapis"
+        android:textSize="@dimen/_16sdp"
+             />
+
+    <!-- Username -->
+    <TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@id/avatar_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="Username"
+        android:textColor="@color/black"
+        android:padding="@dimen/_10sdp"
+        android:textSize="@dimen/_15sdp"
+        android:backgroundTint="@color/offwhite"
+        android:background="@drawable/editbg"
+        android:elevation="5dp"
+       />
+
+    <!-- Email -->
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@id/usernameTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="user@example.com"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+
+        android:backgroundTint="@color/offwhite"
+        android:background="@drawable/editbg"
+        android:elevation="5dp"
+        android:padding="@dimen/_10sdp"
+         />
+
+    <!-- Password -->
+    <TextView
+        android:id="@+id/passwordTextView"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@id/emailTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="••••••"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:elevation="5dp"
+        android:backgroundTint="@color/offwhite"
+        android:background="@drawable/editbg"
+        android:padding="@dimen/_10sdp"
+
+        />
+
+    <!-- Logout Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/logout_btn"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@id/passwordTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/red"
+        android:background="@drawable/edit_bg"
+        />
+
+</RelativeLayout>

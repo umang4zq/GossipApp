@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/editbg">
+
+    <TextView android:id="@+id/action_reply" android:text="↩️ Reply" style="@style/ActionStyle"/>
+    <TextView android:id="@+id/action_forward" android:text="📤 Forward" style="@style/ActionStyle"/>
+    <TextView android:id="@+id/action_copy" android:text="📋 Copy" style="@style/ActionStyle"/>
+    <TextView android:id="@+id/action_translate" android:text="🌐 Translate" style="@style/ActionStyle"/>
+    <TextView android:id="@+id/action_pin" android:text="📌 Pin" style="@style/ActionStyle"/>
+    <TextView android:id="@+id/action_delete" android:text="🗑️ Delete for you" style="@style/ActionStyle"/>
+    <TextView android:id="@+id/action_unsend" android:text="🔴 Unsend"
+        android:textColor="@android:color/holo_red_dark" style="@style/ActionStyle"/>
+</LinearLayout>
